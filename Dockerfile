@@ -7,7 +7,8 @@ RUN apt-get update && \
   ruby \
   ruby-dev \
   libcurl4 \
-  libcurl4-openssl-dev
+  libcurl4-openssl-dev \
+  git-crypt
 
 # Installing fastlane
 RUN gem install fastlane
