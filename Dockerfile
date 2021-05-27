@@ -1,4 +1,4 @@
-FROM runmymind/docker-android-sdk:ubuntu-standalone-slim-master
+FROM runmymind/docker-android-sdk:ubuntu-lazydl-no-docker-slim
 
 # Installing build tools
 RUN apt-get update && \
