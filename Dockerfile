@@ -23,5 +23,5 @@ RUN unzip -d /opt/gradle gradle-4.6-bin.zip
 RUN export PATH=$PATH:/opt/gradle/gradle-4.6/bin
 
 # Install Nodejs
-RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
+RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
     apt-get install -y nodejs git --force-yes -y
