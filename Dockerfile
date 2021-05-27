@@ -1,4 +1,4 @@
-FROM runmymind/docker-android-sdk:ubuntu-lazydl-no-docker-slim
+FROM mingc/android-build-box:1.20.0
 
 # Installing build tools
 RUN apt-get update && \
@@ -9,18 +9,6 @@ RUN apt-get update && \
   libcurl4 \
   libcurl4-openssl-dev \
   git-crypt
-
-# Installing fastlane
-RUN gem install fastlane
-
-# Installing bundle
-RUN gem install bundle
-
-# Install gradle
-RUN wget https://services.gradle.org/distributions/gradle-4.6-bin.zip
-RUN mkdir /opt/gradle
-RUN unzip -d /opt/gradle gradle-4.6-bin.zip
-RUN export PATH=$PATH:/opt/gradle/gradle-4.6/bin
 
 # Install Nodejs
 RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - && \
